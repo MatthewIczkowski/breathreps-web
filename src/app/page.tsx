@@ -1,16 +1,52 @@
+import React from 'react'
+import Image from 'next/image';
+import logo from '@/assets/breathreps-logo.png';
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className=" items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <h1 className="text-4xl font-bold">BreathReps</h1>
+    <div className='p-6 min-h-screen flex flex-col justify-between'>
+      {/* Hero Section */}
+      <section className='text-center'>
+        <h1 className='text-blue-500 text-3xl font-bold'>BreathReps</h1>
+      </section>
+
+      {/* Features Section */}
+      <section className='py-12'>
+        <div className='justify-center mt-8'>
+          <div className='flex flex-col items-center justify-center'>
+            <Image src={logo} alt='BreathReps Logo' className='w-1/2 h-1/2 mb-10' />
+            <h3 className='text-gray-700 text-2xl font-bold text-center'> The free, simple, and effective way to improve your breathing fitness!</h3>
+          </div>
         </div>
-        <h2 className="text-2xl italic">Master your breathing</h2>
-      </main>
-      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <p className="text-xl italic">*App Store Link Coming Soon*</p>
-      </footer> */}
+      </section>
+
+      <section className='py-12'>
+        <div className='flex flex-col items-center justify-center'>
+            <button className='mt-6 px-5 py-3 w-full bg-blue-500 text-white text-sm font-bold rounded-xl shadow-md shadow-blue-900'>
+            GET STARTED
+            </button>
+            <button className='mt-6 px-5 py-3 w-full bg-white text-green-500 text-sm font-bold border-2 border-gray-300 rounded-xl shadow-lg shadow-grey-900'>
+            I ALREADY HAVE AN ACCOUNT
+            </button>
+        </div>
+      </section>
+
+      {/* Download Links Section */}
+      {/* <section className='py-12 text-center'>
+        <h2 className='text-2xl font-bold'>Download the App</h2>
+        <div className='flex justify-center mt-6'>
+          <a href='#' className='mx-2'>
+            <img src='/icons/appstore.png' alt='App Store' />
+            Apple App Store
+          </a>
+          <a href='#' className='mx-2'>
+            <img src='/icons/playstore.png' alt='Google Play' />
+            Google Play Store
+          </a>
+        </div>
+      </section> */}
     </div>
-  );
+  )
 }
+
+export default HomePage
