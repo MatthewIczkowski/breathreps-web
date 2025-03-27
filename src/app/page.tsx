@@ -4,7 +4,7 @@ import logo from '@/assets/image.png';
 
 const HomePage = () => {
   return (
-    <div className='p-6 min-h-screen flex flex-col justify-between items-center'>
+    <div className='p-6 min-h-dvh flex flex-col justify-between items-center'>
         <h1 className='text-blue-500 text-3xl font-bold'>BreathReps</h1>
         <Image src={logo} alt='BreathReps Logo' className='w-1/2 h-1/2 mb-10' />
         <h3 className='text-gray-700 text-2xl font-bold text-center'> The free, simple, and effective way to improve your breathing fitness!</h3>
